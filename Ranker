@@ -1,0 +1,170 @@
+/mon-site-ranker
+│
+├── index.html
+├── style.css
+├── script.js
+└── images/
+    ├── sun/
+    │   ├── xinyu.jpg
+    │   ├── sullin.jpg
+    │   ├── yooyeon.jpg
+    │   ├── kaede.jpg
+    │   ├── mayu.jpg
+    │   └── jeong_hyerin.jpg
+    ├── moon/
+    │   ├── sullin.jpg
+    │   ├── park_sohyun.jpg
+    │  
+::contentReference[oaicite:84]{index=84}
+ 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classement des 4 Équipes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Classement des 4 Équipes</h1>
+  </header>
+
+  <main>
+    <section id="teams">
+      <!-- Équipe Sun -->
+      <div class="team" id="team-sun">
+        <h2>Équipe Sun</h2>
+        <ul class="members">
+          <li>
+            <img src="images/sun/xinyu.jpg" alt="Xinyu">
+            <p>Xinyu (Leader)</p>
+          </li>
+          <li>
+            <img src="images/sun/sullin.jpg" alt="Sullin">
+            <p>Sullin</p>
+          </li>
+          <li>
+            <img src="images/sun/yooyeon.jpg" alt="YooYeon">
+            <p>YooYeon</p>
+          </li>
+          <li>
+            <img src="images/sun/kaede.jpg" alt="Kaede">
+            <p>Kaede</p>
+          </li>
+          <li>
+            <img src="images/sun/mayu.jpg" alt="Mayu">
+            <p>Mayu</p>
+          </li>
+          <li>
+            <img src="images/sun/jeong_hyerin.jpg" alt="Jeong HyeRin">
+            <p>Jeong HyeRin</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Équipe Moon -->
+      <div class="team" id="team-moon">
+        <h2>Équipe Moon</h2>
+        <ul class="members">
+          <li>
+            <img src="images/moon/sullin.jpg" alt="Sullin">
+            <p>Sullin (Leader)</p>
+          </li>
+          <li>
+            <img src="images/moon/park_sohyun.jpg" alt="Park SoHyun">
+            <p>Park SoHyun</p>
+          </li>
+          <li>
+            <img src="images/moon/seo_dahyun.jpg" alt="Seo DaHyun">
+            <p>Seo DaHyun</p>
+          </li>
+          <li>
+            <img src="images/moon/nien.jpg" alt="Nien">
+            <p>Nien</p>
+          </li>
+          <li>
+            <img src="images/moon/yoon_seoyeon.jpg" alt="Yoon SeoYeon">
+            <p>Yoon SeoYeon</p>
+          </li>
+          <li>
+            <img src="images/moon/gong_yubin.jpg" alt="Gong YuBin">
+            <p>Gong YuBin</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Équipe Neptune -->
+      <div class="team" id="team-neptune">
+        <h2>Équipe Neptune</h2>
+        <ul class="members">
+          <li>
+            <img src="images/neptune/seoyeon.jpg" alt="Seoyeon">
+            <p>Seoyeon (Leader)</p>
+          </li>
+          <li>
+            <img src="images/neptune/jeong_hayeon.jpg" alt="Jeong HaYeon">
+            <p>Jeong HaYeon</p>
+          </li>
+          <li>
+            <img src="images/neptune/jiwoo.jpg" alt="JiWoo">
+            <p>JiWoo</p>
+          </li>
+          <li>
+            <img src="images/neptune/shi_on.jpg" alt="ShiOn">
+            <p>ShiOn</p>
+          </li>
+          <li>
+            <img src="images/neptune/lynn.jpg" alt="Lynn">
+            <p>Lynn</p>
+          </li>
+          <li>
+            <img src="images/neptune/kaede.jpg" alt="Kaede">
+            <p>Kaede</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Équipe Zenith -->
+      <div class="team" id="team-zenith">
+        <h2>Équipe Zenith</h2>
+        <ul class="members">
+          <li>
+            <img src="images/zenith/hayeon.jpg" alt="Hayeon">
+            <p>Hayeon (Leader)</p>
+          </li>
+          <li>
+            <img src="images/zenith/yooyeon.jpg" alt="YooYeon">
+            <p>YooYeon</p>
+          </li>
+          <li>
+            <img src="images/zenith/mayu.jpg" alt="Mayu">
+            <p>Mayu</p>
+          </li>
+          <li>
+            <img src="images/zenith/jeong_hyerin.jpg" alt="Jeong HyeRin">
+            <p>Jeong HyeRin</p>
+          </li>
+          <li>
+            <img src="images/zenith/kaede.jpg" alt="Kaede">
+            <p>Kaede</p>
+          </li>
+          <li>
+            <img src="images/zenith/jeong_hayeon.jpg" alt="Jeong HaYeon">
+            <p>Jeong HaYeon</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+//function vote(memberId) {
+  const member = document.getElementById(memberId);
+  let votes = parseInt(member.dataset.votes) || 0;
+  votes++;
+  member.dataset.votes = votes;
+  member.querySelector('.votes').textContent = `Votes: ${votes}`;
+}
